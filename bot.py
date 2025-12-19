@@ -4,7 +4,7 @@ from datetime import date
 import json
 
 TOKEN = "${{ secrets.TOKEN_TELEGRAM }}"
-DATE_DE_DEPART = date(2025, 8, 12)  # date de début du cycle
+DATE_DE_DEPART = date(2025, 12, 19)  # date de début du cycle
 
 def envoyer_message(chat_id, message, buttons=None):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
