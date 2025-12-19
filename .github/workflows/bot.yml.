@@ -1,0 +1,18 @@
+name: Bot tâches maison
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 07:00 Ouganda
+    - cron: '0 16 * * *'  # 19:00 Ouganda
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install pandas requests
+      - run: python bot.py
