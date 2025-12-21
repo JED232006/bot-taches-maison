@@ -16,7 +16,7 @@ def send(chat_id, text):
 
 df = pd.read_csv("horaire.csv")
 
-jour = ((date.today() - DATE_DE_DEPART).days % 21) + 1
+jour = 1
 
 today = df[df["jour_cycle"] == jour]
 
