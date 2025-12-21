@@ -1,84 +1,70 @@
-jour_cycle,heure,nom,chat_id,tache
-1,15:36,Jed,7508339230,Cooking & Dishes
-1,15:36,Yves,7431839058,Cleaning
-1,15:36,Derek,8271320198,Free
+jour_cycle,nom,tache,chat_id
+1,Yves,Cooking & Dishes,7431839058
+1,Jed,Cleaning,7508339230
+1,Derek,Free,8271320198
+2,Yves,Free,7431839058
+2,Jed,Cooking & Dishes,7508339230
+2,Derek,Cleaning,8271320198
+3,Yves,Cleaning,7431839058
+3,Jed,Free,7508339230
+3,Derek,Cooking & Dishes,8271320198
 
-2,07:00,Yves,7431839058,Cooking & Dishes
-2,07:00,Derek,8271320198,Cleaning
-2,07:00,Jed,7508339230,Free
+4,Yves,Cooking & Dishes,7431839058
+4,Jed,Cleaning,7508339230
+4,Derek,Free,8271320198
+5,Yves,Free,7431839058
+5,Jed,Cooking & Dishes,7508339230
+5,Derek,Cleaning,8271320198
+6,Yves,Cleaning,7431839058
+6,Jed,Free,7508339230
+6,Derek,Cooking & Dishes,8271320198
 
-3,07:00,Jed,7508339230,Cooking & Dishes
-3,07:00,Yves,7431839058,Cleaning
-3,07:00,Derek,8271320198,Free
+7,Yves,Cooking & Dishes,7431839058
+7,Jed,Cleaning,7508339230
+7,Derek,Free,8271320198
+8,Yves,Free,7431839058
+8,Jed,Cooking & Dishes,7508339230
+8,Derek,Cleaning,8271320198
+9,Yves,Cleaning,7431839058
+9,Jed,Free,7508339230
+9,Derek,Cooking & Dishes,8271320198
 
-4,07:00,Derek,8271320198,Cooking & Dishes
-4,07:00,Jed,7508339230,Cleaning
-4,07:00,Yves,7431839058,Free
+10,Yves,Cooking & Dishes,7431839058
+10,Jed,Cleaning,7508339230
+10,Derek,Free,8271320198
+11,Yves,Free,7431839058
+11,Jed,Cooking & Dishes,7508339230
+11,Derek,Cleaning,8271320198
+12,Yves,Cleaning,7431839058
+12,Jed,Free,7508339230
+12,Derek,Cooking & Dishes,8271320198
 
-5,07:00,Jed,7508339230,Cooking & Dishes
-5,07:00,Yves,7431839058,Cleaning
-5,07:00,Derek,8271320198,Free
+13,Yves,Cooking & Dishes,7431839058
+13,Jed,Cleaning,7508339230
+13,Derek,Free,8271320198
+14,Yves,Free,7431839058
+14,Jed,Cooking & Dishes,7508339230
+14,Derek,Cleaning,8271320198
+15,Yves,Cleaning,7431839058
+15,Jed,Free,7508339230
+15,Derek,Cooking & Dishes,8271320198
 
-6,07:00,Yves,7431839058,Cooking & Dishes
-6,07:00,Derek,8271320198,Cleaning
-6,07:00,Jed,7508339230,Free
+16,Yves,Cooking & Dishes,7431839058
+16,Jed,Cleaning,7508339230
+16,Derek,Free,8271320198
+17,Yves,Free,7431839058
+17,Jed,Cooking & Dishes,7508339230
+17,Derek,Cleaning,8271320198
+18,Yves,Cleaning,7431839058
+18,Jed,Free,7508339230
+18,Derek,Cooking & Dishes,8271320198
 
-7,07:00,Jed,7508339230,Cooking & Dishes
-7,07:00,Yves,7431839058,Cleaning
-7,07:00,Derek,8271320198,Free
-
-8,07:00,Yves,7431839058,Cooking & Dishes
-8,07:00,Derek,8271320198,Cleaning
-8,07:00,Jed,7508339230,Free
-
-9,07:00,Derek,8271320198,Cooking & Dishes
-9,07:00,Jed,7508339230,Cleaning
-9,07:00,Yves,7431839058,Free
-
-10,07:00,Jed,7508339230,Cooking & Dishes
-10,07:00,Yves,7431839058,Cleaning
-10,07:00,Derek,8271320198,Free
-
-11,07:00,Yves,7431839058,Cooking & Dishes
-11,07:00,Derek,8271320198,Cleaning
-11,07:00,Jed,7508339230,Free
-
-12,07:00,Jed,7508339230,Cooking & Dishes
-12,07:00,Yves,7431839058,Cleaning
-12,07:00,Derek,8271320198,Free
-
-13,07:00,Derek,8271320198,Cooking & Dishes
-13,07:00,Jed,7508339230,Cleaning
-13,07:00,Yves,7431839058,Free
-
-14,07:00,Yves,7431839058,Cooking & Dishes
-14,07:00,Derek,8271320198,Cleaning
-14,07:00,Jed,7508339230,Free
-
-15,07:00,Derek,8271320198,Cooking & Dishes
-15,07:00,Yves,7431839058,Cleaning
-15,07:00,Jed,7508339230,Free
-
-16,07:00,Yves,7431839058,Cooking & Dishes
-16,07:00,Derek,8271320198,Cleaning
-16,07:00,Jed,7508339230,Free
-
-17,07:00,Derek,8271320198,Cooking & Dishes
-17,07:00,Jed,7508339230,Cleaning
-17,07:00,Yves,7431839058,Free
-
-18,07:00,Yves,7431839058,Cooking & Dishes
-18,07:00,Derek,8271320198,Cleaning
-18,07:00,Jed,7508339230,Free
-
-19,07:00,Derek,8271320198,Cooking & Dishes
-19,07:00,Yves,7431839058,Cleaning
-19,07:00,Jed,7508339230,Free
-
-20,07:00,Jed,7508339230,Cooking & Dishes
-20,07:00,Yves,7431839058,Cleaning
-20,07:00,Derek,8271320198,Free
-
-21,07:00,Derek,8271320198,Cooking & Dishes
-21,07:00,Jed,7508339230,Cleaning
-21,07:00,Yves,7431839058,Free
+19,Yves,Cooking & Dishes,7431839058
+19,Jed,Cleaning,7508339230
+19,Derek,Free,8271320198
+20,Yves,Free,7431839058
+20,Jed,Cooking & Dishes,7508339230
+20,Derek,Cleaning,8271320198
+21,Yves,Cleaning,7431839058
+21,Jed,Free,7508339230
+21,Derek,Cooking & Dishes,8271320198
