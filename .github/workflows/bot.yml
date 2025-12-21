@@ -1,36 +1,41 @@
-name: Bot tâches maison
+name: Bot taches maison
 
 on:
   schedule:
-    - cron: '0 4 * * *'   # 07h Ouganda
-    - cron: '0 16 * * *'  # 19h Ouganda
-    - cron: '0 18 * * *'  # 21h Ouganda
+    - cron: "0 4 * * *"   # 07:00 local → message du jour
+    - cron: "0 18 * * *"  # 21:00 local → reminders
   workflow_dispatch:
 
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.11"
+
       - run: pip install pandas requests
 
-      - name: Morning messages
+      - name: Morning message
         if: github.event.schedule == '0 4 * * *'
-        run: MODE=morning python bot.py
+        run: python bot.py
         env:
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
-
-      - name: Cleaning reminder
-        if: github.event.schedule == '0 16 * * *'
-        run: MODE=cleaning python bot.py
-        env:
-          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: morning
 
       - name: Cooking reminder
         if: github.event.schedule == '0 18 * * *'
-        run: MODE=cooking python bot.py
+        run: python bot.py
         env:
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: cooking
+
+      - name: Cleaning reminder
+        if: github.event.schedule == '0 18 * * *'
+        run: python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: cleaning
