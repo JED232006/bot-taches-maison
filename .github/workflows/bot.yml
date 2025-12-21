@@ -2,8 +2,9 @@ name: Bot tâches maison
 
 on:
   schedule:
-    - cron: '0 4 * * *'   # 07:00 Ouganda
-    - cron: '0 16 * * *'  # 19:00 Ouganda
+    - cron: '0 4 * * *'   # 07h Ouganda
+    - cron: '0 16 * * *'  # 19h Ouganda
+    - cron: '0 18 * * *'  # 21h Ouganda
   workflow_dispatch:
 
 jobs:
@@ -15,4 +16,21 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install pandas requests
-      - run: python bot.py
+
+      - name: Morning messages
+        if: github.event.schedule == '0 4 * * *'
+        run: MODE=morning python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+
+      - name: Cleaning reminder
+        if: github.event.schedule == '0 16 * * *'
+        run: MODE=cleaning python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+
+      - name: Cooking reminder
+        if: github.event.schedule == '0 18 * * *'
+        run: MODE=cooking python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
