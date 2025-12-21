@@ -8,7 +8,8 @@ print("TOKEN =", TOKEN)
 requests.post(
     f"https://api.telegram.org/bot{TOKEN}/sendMessage",
     data={
-        "chat_id": 	7508339230,
+        "chat_id":8271320198,
+        "chat_id":8271320198,
         "text": "TEST MESSAGE ✅ If you see this, Telegram works."
     }
 )
