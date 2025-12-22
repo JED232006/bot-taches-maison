@@ -1,13 +1,10 @@
-name: Bot taches maison
+name: Test Telegram Bot
 
 on:
-  schedule:
-    - cron: "0 4 * * *"
-    - cron: "0 18 * * *"
   workflow_dispatch:
 
 jobs:
-  run-bot:
+  test-bot:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,25 +14,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install pandas requests
+      - name: Install requests
+        run: pip install requests
 
-      - name: Morning task message
-        if: github.event.schedule == '0 4 * * *'
+      - name: Send test message
         run: python bot.py
         env:
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
-          MODE: morning
-
-      - name: Cooking reminder
-        if: github.event.schedule == '0 18 * * *'
-        run: python bot.py
-        env:
-          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
-          MODE: cooking
-
-      - name: Cleaning reminder
-        if: github.event.schedule == '0 18 * * *'
-        run: python bot.py
-        env:
-          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
-          MODE: cleaning
