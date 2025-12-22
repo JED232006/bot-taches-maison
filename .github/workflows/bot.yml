@@ -1,33 +1,41 @@
-name: bot-taches-maison
+name: Bot taches maison
 
-# Déclencheur : à chaque push sur la branche main
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Permet de lancer manuellement le workflow
+  schedule:
+    - cron: "0 4 * * *"
+    - cron: "0 18 * * *"
+  workflow_dispatch:
 
 jobs:
-  send_message:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
-      # Étape 1 : Récupérer le code du repo
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # Étape 2 : Configurer Python
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Choisis la version de Python
+          python-version: "3.11"
 
-      # Étape 3 : Installer les dépendances
-      - name: Install dependencies
-        run: pip install requests
+      - run: pip install pandas requests
 
-      # Étape 4 : Exécuter le script Python
-      - name: Run Telegram script
+      - name: Morning task message
+        if: github.event.schedule == '0 4 * * *'
+        run: python bot.py
         env:
-          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}  # On utilise un secret GitHub pour le token
-        run: python your_script.py
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: morning
+
+      - name: Cooking reminder
+        if: github.event.schedule == '0 18 * * *'
+        run: python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: cooking
+
+      - name: Cleaning reminder
+        if: github.event.schedule == '0 18 * * *'
+        run: python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: cleaning
