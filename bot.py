@@ -1,20 +1,59 @@
+import pandas as pd
 import requests
 import os
+from datetime import date
 
 TOKEN = os.getenv("TOKEN_TELEGRAM")
+MODE = os.getenv("MODE")
 
-CHAT_ID = 7508339230  # ton chat_id
+CSV_FILE = "horaire.csv"
 
-message = "✅ TEST OK\n\nCe message confirme que le bot Telegram fonctionne 🚀"
+# Jour automatique (1 → 21 → recommence)
+today = date.today()
+day_number = (today.toordinal() % 21) or 21
 
-url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+df = pd.read_csv(CSV_FILE)
+today_tasks = df[df["day"] == day_number]
 
-data = {
-    "chat_id": CHAT_ID,
-    "text": message
-}
+def send(chat_id, message):
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    requests.post(url, data={"chat_id": chat_id, "text": message})
 
-response = requests.post(url, data=data)
+for _, row in today_tasks.iterrows():
+    name = row["person"]
+    task = row["task"]
+    chat_id = row["chat_id"]
 
-print("Status code:", response.status_code)
-print("Response:", response.text)
+    # 🌅 MESSAGE DU MATIN (07:00)
+    if MODE == "morning":
+        if task == "Free":
+            msg = (
+                f"Good morning {name} 👋\n\n"
+                "Today you are free 😄\n"
+                "Enjoy your day!"
+            )
+        else:
+            msg = (
+                f"Good morning {name} 👋\n\n"
+                f"Your task for today is: {task}\n"
+                "💪 Good luck!"
+            )
+        send(chat_id, msg)
+
+    # 🌙 RAPPELS DU SOIR (21:00)
+    elif MODE == "evening":
+        if task == "Cooking & Dishes":
+            msg = (
+                f"🍽️ Evening reminder {name}!\n\n"
+                "Don't forget your task:\n"
+                "Cooking & Dishes 👨‍🍳"
+            )
+            send(chat_id, msg)
+
+        elif task == "Cleaning":
+            msg = (
+                f"🧹 Evening reminder {name}!\n\n"
+                "Don't forget your task:\n"
+                "Cleaning 🧼"
+            )
+            send(chat_id, msg)
