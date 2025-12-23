@@ -1,70 +1,84 @@
-jour_cycle,nom,tache,chat_id
-1,Yves,Cooking & Dishes,7431839058
-1,Jed,Cleaning,7508339230
-1,Derek,Free,8271320198
-2,Yves,Free,7431839058
-2,Jed,Cooking & Dishes,7508339230
-2,Derek,Cleaning,8271320198
-3,Yves,Cleaning,7431839058
-3,Jed,Free,7508339230
-3,Derek,Cooking & Dishes,8271320198
+day,person,task,chat_id
+1,jed,Cooking & Dishes,7508339230
+1,yves,Cleaning,7431839058
+1,derek,Free,8271320198
 
-4,Yves,Cooking & Dishes,7431839058
-4,Jed,Cleaning,7508339230
-4,Derek,Free,8271320198
-5,Yves,Free,7431839058
-5,Jed,Cooking & Dishes,7508339230
-5,Derek,Cleaning,8271320198
-6,Yves,Cleaning,7431839058
-6,Jed,Free,7508339230
-6,Derek,Cooking & Dishes,8271320198
+2,jed,Free,7508339230
+2,yves,Cooking & Dishes,7431839058
+2,derek,Cleaning,8271320198
 
-7,Yves,Cooking & Dishes,7431839058
-7,Jed,Cleaning,7508339230
-7,Derek,Free,8271320198
-8,Yves,Free,7431839058
-8,Jed,Cooking & Dishes,7508339230
-8,Derek,Cleaning,8271320198
-9,Yves,Cleaning,7431839058
-9,Jed,Free,7508339230
-9,Derek,Cooking & Dishes,8271320198
+3,jed,Cleaning,7508339230
+3,yves,Free,7431839058
+3,derek,Cooking & Dishes,8271320198
 
-10,Yves,Cooking & Dishes,7431839058
-10,Jed,Cleaning,7508339230
-10,Derek,Free,8271320198
-11,Yves,Free,7431839058
-11,Jed,Cooking & Dishes,7508339230
-11,Derek,Cleaning,8271320198
-12,Yves,Cleaning,7431839058
-12,Jed,Free,7508339230
-12,Derek,Cooking & Dishes,8271320198
+4,jed,Cooking & Dishes,7508339230
+4,yves,Cleaning,7431839058
+4,derek,Free,8271320198
 
-13,Yves,Cooking & Dishes,7431839058
-13,Jed,Cleaning,7508339230
-13,Derek,Free,8271320198
-14,Yves,Free,7431839058
-14,Jed,Cooking & Dishes,7508339230
-14,Derek,Cleaning,8271320198
-15,Yves,Cleaning,7431839058
-15,Jed,Free,7508339230
-15,Derek,Cooking & Dishes,8271320198
+5,jed,Free,7508339230
+5,yves,Cooking & Dishes,7431839058
+5,derek,Cleaning,8271320198
 
-16,Yves,Cooking & Dishes,7431839058
-16,Jed,Cleaning,7508339230
-16,Derek,Free,8271320198
-17,Yves,Free,7431839058
-17,Jed,Cooking & Dishes,7508339230
-17,Derek,Cleaning,8271320198
-18,Yves,Cleaning,7431839058
-18,Jed,Free,7508339230
-18,Derek,Cooking & Dishes,8271320198
+6,jed,Cleaning,7508339230
+6,yves,Free,7431839058
+6,derek,Cooking & Dishes,8271320198
 
-19,Yves,Cooking & Dishes,7431839058
-19,Jed,Cleaning,7508339230
-19,Derek,Free,8271320198
-20,Yves,Free,7431839058
-20,Jed,Cooking & Dishes,7508339230
-20,Derek,Cleaning,8271320198
-21,Yves,Cleaning,7431839058
-21,Jed,Free,7508339230
-21,Derek,Cooking & Dishes,8271320198
+7,jed,Cooking & Dishes,7508339230
+7,yves,Cleaning,7431839058
+7,derek,Free,8271320198
+
+8,jed,Free,7508339230
+8,yves,Cooking & Dishes,7431839058
+8,derek,Cleaning,8271320198
+
+9,jed,Cleaning,7508339230
+9,yves,Free,7431839058
+9,derek,Cooking & Dishes,8271320198
+
+10,jed,Cooking & Dishes,7508339230
+10,yves,Cleaning,7431839058
+10,derek,Free,8271320198
+
+11,jed,Free,7508339230
+11,yves,Cooking & Dishes,7431839058
+11,derek,Cleaning,8271320198
+
+12,jed,Cleaning,7508339230
+12,yves,Free,7431839058
+12,derek,Cooking & Dishes,8271320198
+
+13,jed,Cooking & Dishes,7508339230
+13,yves,Cleaning,7431839058
+13,derek,Free,8271320198
+
+14,jed,Free,7508339230
+14,yves,Cooking & Dishes,7431839058
+14,derek,Cleaning,8271320198
+
+15,jed,Cleaning,7508339230
+15,yves,Free,7431839058
+15,derek,Cooking & Dishes,8271320198
+
+16,jed,Cooking & Dishes,7508339230
+16,yves,Cleaning,7431839058
+16,derek,Free,8271320198
+
+17,jed,Free,7508339230
+17,yves,Cooking & Dishes,7431839058
+17,derek,Cleaning,8271320198
+
+18,jed,Cleaning,7508339230
+18,yves,Free,7431839058
+18,derek,Cooking & Dishes,8271320198
+
+19,jed,Cooking & Dishes,7508339230
+19,yves,Cleaning,7431839058
+19,derek,Free,8271320198
+
+20,jed,Free,7508339230
+20,yves,Cooking & Dishes,7431839058
+20,derek,Cleaning,8271320198
+
+21,jed,Cleaning,7508339230
+21,yves,Free,7431839058
+21,derek,Cooking & Dishes,8271320198
