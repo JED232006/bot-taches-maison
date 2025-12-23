@@ -1,10 +1,13 @@
-name: Test Telegram Bot
+name: Bot taches maison
 
 on:
+  schedule:
+    - cron: "0 4 * * *"   # 07:00 Kampala
+    - cron: "0 18 * * *"  # 21:00 Kampala
   workflow_dispatch:
 
 jobs:
-  test-bot:
+  run-bot:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,10 +17,20 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install requests
-        run: pip install requests
+      - run: pip install pandas requests
 
-      - name: Send test message
+      # 🌅 Message du matin
+      - name: Morning message
+        if: github.event.schedule == '0 4 * * *'
         run: python bot.py
         env:
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: morning
+
+      # 🌙 Rappels du soir
+      - name: Evening reminders
+        if: github.event.schedule == '0 18 * * *'
+        run: python bot.py
+        env:
+          TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
+          MODE: evening
