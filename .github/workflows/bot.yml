@@ -2,7 +2,7 @@ name: Bot taches maison
 
 on:
   schedule:
-    - cron: "0 4 * * *"   # 07:00 Kampala
+    - cron: "0 3 * * *"   # 07:00 Kampala
     - cron: "0 18 * * *"  # 21:00 Kampala
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
 
       # 🌅 Message du matin
       - name: Morning message
-        if: github.event.schedule == '0 4 * * *'
+        if: github.event.schedule == '0 3 * * *'
         run: python bot.py
         env:
           TOKEN_TELEGRAM: ${{ secrets.TOKEN_TELEGRAM }}
