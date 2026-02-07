@@ -2,7 +2,7 @@ name: Bot taches maison
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # 07:00 Kampala
+    - cron: "0 3 * * *"   # 06:00 Kampala
     - cron: "0 18 * * *"  # 21:00 Kampala
   workflow_dispatch:
 
