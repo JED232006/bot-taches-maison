@@ -1,6 +1,5 @@
 name: Bot taches maison
 
-
 on:
   schedule:
     - cron: "0 3 * * *"   # 06:00 Kampala
